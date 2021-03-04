@@ -1,1 +1,0 @@
-# paulduf.github.io
