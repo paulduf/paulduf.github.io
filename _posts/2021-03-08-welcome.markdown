@@ -4,16 +4,16 @@ title:  "Welcome to my site!"
 date:   2021-03-08 15:24:42 +0100
 categories: welcome
 ---
-I'm glad to introduce my new personal page. I'm a PhD candidate supported by a CIFRE contract between the Inria Randopt team and Thales. My advisor is [Nikolaus Hansen][n-hansen].
+I'm glad to introduce my new personal webpage. The site is currently under construction.
+
+
 Let's test a Python code snippet:
 
 {% highlight python %}
 import cma
+from numpy import allclose
 
-universal_solver = cma.fmin2
-print("Now you can solve any problem by calling universal_solver"))
+res, es = cma.fmin_con(cma.ff.sphere, [10]*5, 1, g=lambda x: [1-x[0]])
+xopt = [1] + [0] * 4
+assert allclose(xopt, es.mean, 1e-4, 1e-4)
 {% endhighlight %}
-
-[n-hansen]: http://www.cmap.polytechnique.fr/~nikolaus.hansen/
-[a-auger]:   http://www.cmap.polytechnique.fr/~anne.auger/
-[jekyll-talk]: https://talk.jekyllrb.com/
