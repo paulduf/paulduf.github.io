@@ -5,7 +5,7 @@ Empirical cumulative distribution of simulated (bootstrapped)
              targets $10^{[-6..2]}$ in dimension #1.
 }
 \providecommand{\cocoversion}{\hspace{\textwidth}\scriptsize\sffamily{}\color{Gray}Data produced with COCO v5z33}
-\providecommand{\numofalgs}{3}
+\providecommand{\numofalgs}{4}
 \providecommand{\bbobECDFslegend}[1]{
 Bootstrapped empirical cumulative distribution of the number of objective function evaluations divided by dimension (FEvals/DIM) for $41$ targets with target precision in $10^{[-6..2]}$ for all functions and subgroups in #1-D. 
 }
@@ -17,6 +17,7 @@ Legend:
 {\color{NavyBlue}$\circ$}: \algorithmA
 , {\color{Magenta}$\diamondsuit$}: \algorithmB
 , {\color{Orange}$\star$}: \algorithmC
+, {\color{CornflowerBlue}$\triangledown$}: \algorithmD
 }
 % define some COCO/dvipsnames colors because
 % ACM style does not allow to use them directly
@@ -38,8 +39,6 @@ Legend:
 \definecolor{LimeGreen}{HTML}{32CD32}
 
 \providecommand{\ntables}{7}
-\providecommand{\ntables}{7}
-\providecommand{\ntables}{7}
 \providecommand{\pptablesfooter}{
 \end{tabularx}
 }
@@ -47,9 +46,10 @@ Legend:
 \begin{tabularx}{1.0\textwidth}{@{}c@{}|*{7}{@{}r@{}X@{}}|@{}r@{}@{}l@{}}
 $\Delta f_\mathrm{opt}$ & \multicolumn{2}{@{\,}l@{\,}}{1e1} & \multicolumn{2}{@{\,}l@{\,}}{1e0} & \multicolumn{2}{@{\,}l@{\,}}{1e-1} & \multicolumn{2}{@{\,}l@{\,}}{1e-2} & \multicolumn{2}{@{\,}l@{\,}}{1e-3} & \multicolumn{2}{@{\,}l@{\,}}{1e-5} & \multicolumn{2}{@{\,}l@{\,}}{1e-6} & \multicolumn{2}{|@{}l@{}}{\#succ}\\\hline
 }
-\providecommand{\algCtables}{\StrLeft{NEW+DGAM}{\ntables}}
-\providecommand{\algBtables}{\StrLeft{OLD+NODGAM}{\ntables}}
-\providecommand{\algAtables}{\StrLeft{OLD+DGAM}{\ntables}}
+\providecommand{\algDtables}{\StrLeft{alO5}{\ntables}}
+\providecommand{\algCtables}{\StrLeft{alN5}{\ntables}}
+\providecommand{\algBtables}{\StrLeft{alN1}{\ntables}}
+\providecommand{\algAtables}{\StrLeft{al01}{\ntables}}
 \providecommand{\ntables}{7}
 \providecommand{\ntables}{7}
 \providecommand{\ntables}{7}
@@ -69,7 +69,8 @@ $\Delta f_\mathrm{opt}$ & \multicolumn{2}{@{\,}l@{\,}}{1e1} & \multicolumn{2}{@{
         $p = 0.05$ or $p = 10^{-k}$ when the number $k$ following the star is larger
         than 1, with Bonferroni correction by the number of functions (48). A $\downarrow$ indicates the same tested against . Best results are printed in bold.
         \cocoversion}
-\providecommand{\algsfolder}{OLD+D_OLD+N_NEW+D/}
-\providecommand{\algorithmA}{NEW+DGAM}
-\providecommand{\algorithmB}{OLD+DGAM}
-\providecommand{\algorithmC}{OLD+NODGAM}
+\providecommand{\algsfolder}{al01_alN1_alN5_alO5/}
+\providecommand{\algorithmA}{al01}
+\providecommand{\algorithmB}{alN1}
+\providecommand{\algorithmC}{alN5}
+\providecommand{\algorithmD}{alO5}
